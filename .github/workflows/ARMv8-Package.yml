@@ -1,4 +1,4 @@
-name: ARMv8 Package
+name: ARMv8_Package
 
 on:
   workflow_dispatch:
