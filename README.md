@@ -55,14 +55,14 @@
 ## 插件预览 [![](https://img.shields.io/badge/-固件插件及功能预览-FFFFFF.svg)](#插件预览-)
 <details>
 <summary><b>&nbsp;X86 插件预览</b></summary>
-<img src="https://cdn.jsdelivr.net/gh/py95/OpenwrtPlus/images/x86.png"/>
+<img src="https://cdn.jsdelivr.net/gh/py95/OpenwrtPlus/images/plus.png"/>
 <br/>
 </details>
 
 <details>
 <summary><b>&nbsp;VM 插件预览</b></summary>
 <br/>
-<img src="https://cdn.jsdelivr.net/gh/py95/OpenwrtPlus/images/vm.png"/>
+<img src="https://cdn.jsdelivr.net/gh/py95/OpenwrtPlus/images/mini.png"/>
 </details>
 
 ## 定制固件 [![](https://img.shields.io/badge/-项目基本编译教程-FFFFFF.svg)](#定制固件-)
