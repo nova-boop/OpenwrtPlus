@@ -9,6 +9,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   CONFIG_FILE: configs/x86_64.config
+  KERNEL_CONFIG_FILE: configs/kernel.6.1.97.config
   DIY_SCRIPT: diy-script.sh
   CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
@@ -78,6 +79,8 @@ jobs:
 
     - name: Generate Variables
       run: |
+        cp $KERNEL_CONFIG_FILE $OPENWRT_PATH/build_dir/target-x86_64_musl/linux-x86_64/linux-6.1.97/.config
+        $OPENWRT_PATH/scripts/kconfig.pl - '>'   $OPENWRT_PATH/target/linux/generic/config-6.1 $OPENWRT_PATH/build_dir/target-x86_64_musl/linux-x86_64/linux-6.1.97/.config $OPENWRT_PATH/target/linux/generic/config-filter > $OPENWRT_PATH/target/linux/x86/config-6.1
         cp $CONFIG_FILE $OPENWRT_PATH/.config
         cd $OPENWRT_PATH
         make defconfig > /dev/null 2>&1
