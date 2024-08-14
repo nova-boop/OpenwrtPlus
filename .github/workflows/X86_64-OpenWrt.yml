@@ -119,7 +119,7 @@ jobs:
       run: |
         # Copy kernel config after initial preparation
         cd $OPENWRT_PATH
-        ls OPENWRT_PATH/build_dir/
+        ls $OPENWRT_PATH/build_dir/
         cp $CONFIG_KERRNEL_FILE $OPENWRT_PATH/build_dir/target-*/linux-*/linux-*/.config
 
     - name: Finalize kernel config
