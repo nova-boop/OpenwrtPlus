@@ -118,10 +118,13 @@ jobs:
     - name: Prepare kernel config
       run: |
         # Copy kernel config after initial preparation
+        cd $OPENWRT_PATH
+        ls OPENWRT_PATH/build_dir/
         cp $CONFIG_KERRNEL_FILE $OPENWRT_PATH/build_dir/target-*/linux-*/linux-*/.config
 
     - name: Finalize kernel config
       run: |
+        cd $OPENWRT_PATH
         make kernel_oldconfig
         
     - name: Download DL Package
