@@ -82,7 +82,7 @@ jobs:
         cp $CONFIG_FILE $OPENWRT_PATH/.config
         cd $OPENWRT_PATH
         make defconfig > /dev/null 2>&1
-        cp $CONFIG_KERRNEL_FILE build_dir/target-*/linux-*/linux-*/.config
+        cp $CONFIG_KERRNEL_FILE $OPENWRT_PATH/build_dir/target-*/linux-*/linux-*/.config
         make kernel_oldconfig
         SOURCE_REPO="$(echo $REPO_URL | awk -F '/' '{print $(NF)}')"
         echo "SOURCE_REPO=$SOURCE_REPO" >> $GITHUB_ENV
