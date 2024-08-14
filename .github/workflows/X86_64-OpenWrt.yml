@@ -117,10 +117,8 @@ jobs:
         
     - name: Prepare kernel config
       run: |
-        # Make sure the necessary directories exist
-        make prepare
         # Copy kernel config after initial preparation
-        [ -e $CONFIG_KERRNEL_FILE ] && cp $CONFIG_KERRNEL_FILE $OPENWRT_PATH/build_dir/target-*/linux-*/linux-*/.config
+        cp $CONFIG_KERRNEL_FILE $OPENWRT_PATH/build_dir/target-*/linux-*/linux-*/.config
 
     - name: Finalize kernel config
       run: |
